@@ -1,0 +1,15 @@
+<div class="container py-5 bg-faded">
+  <div class="card-columns">
+
+    <div class="card " *ngFor="let item of items; let i = index" [attr.data-index]="i" style="border-radius: 5%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <img [src]="item.imageLink" style="border-top-right-radius: 5%;border-top-left-radius: 5%;" class="card-img-top" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+      </div>
+      <div class="card-body">
+        <a (click)="navigateToTest(i)" class="btn btn-primary">جرب الآن</a>
+      </div>
+
+    </div>
+  </div>
+</div>
